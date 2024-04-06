@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require('dotenv')
 
+const authRoutes = require('./controllers/auth.controller');
 dotenv.config();
 
 mongoose
@@ -15,6 +16,10 @@ mongoose
 
 const app = express();
 
+app.use(express.json()); //allows json as input in backend
+
 app.listen(3000, () => {
   console.log("Server is running on Port 3000");
 });
+
+app.use('/api/auth', authRoutes);
