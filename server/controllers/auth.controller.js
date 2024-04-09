@@ -1,6 +1,6 @@
 const User = require("../models/user.model");
-const bcryptjs = require('bcryptjs');
-const errorHandler = require('../middlewares/error');
+const bcryptjs = require("bcryptjs");
+const errorHandler = require("../middlewares/error");
 
 //Signup function to handle registration
 const signup = async (req, res, next) => {
@@ -14,7 +14,7 @@ const signup = async (req, res, next) => {
     email === "" ||
     password === ""
   ) {
-   next(errorHandler(400, 'All fields are required!'));
+    next(errorHandler(400, "All fields are required!"));
   }
 
   //hash password
