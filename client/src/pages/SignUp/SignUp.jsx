@@ -26,11 +26,11 @@ const SignUp = () => {
         body: JSON.stringify(signUpData),
       });
       const data = await res.json();
+      navigate('/login');
       if (data.success === false) {
         return setErrorMessage(data.message);
       }
       setLoading(false);
-      navigate('/login');
     } catch (err) {
       setErrorMessage(err.message);
       setLoading(false);
@@ -42,9 +42,10 @@ const SignUp = () => {
       <div className="flex p-3 max-w-3xl mx-auto flex-col md:flex-row md:items-center gap-10">
         {/* left */}
         <div className="flex-1">
+          <p className="font-bold dark:text-white text-3xl mb-5">Welcome to</p>
           <Link to="/" className="font-bold dark:text-white text-3xl">
             <span className="px-2 py-1 bg-gradient-to-r from-blue-600 via-teal-500 to-green-300 rounded-lg text-white">
-              Welcome to My
+             Lucille's
             </span>
             Portfolio
           </Link>
