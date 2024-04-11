@@ -1,8 +1,6 @@
 import React from "react";
 import { Footer } from "flowbite-react";
-import Github from "../../assets/logos/github.png";
-import Linkedin from "../../assets/logos/linkedin.png";
-import { BsInstagram, BsGithub, BsLinkedin } from "react-icons/bs";
+import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 const FooterCom = () => {
   return (
